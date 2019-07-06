@@ -1,0 +1,12 @@
+# properties 配置
+# spring.mail.username=1329208516@qq.com
+# spring.mail.password=ksmwvjhwwtsdhcge
+# spring.mail.host=smtp.qq.com
+# spring.mail.properties.mail.smtp.ssl.enable=true
+spring:
+  mail:
+    username: 1329208516@qq.com
+    password: ljmfxjakdvnxjhii
+    host: smtp.qq.com
+server:
+  port: 8083

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>codeDemo</artifactId>
+        <groupId>com.iscolt</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>dependencies</artifactId>
+    <name>dependencies</name>
+    <description>整个项目依赖</description>
+    <packaging>pom</packaging>
+
+    <!-- 版本说明：这里统一管理依赖的版本号 -->
+    <properties>
+        <!-- Spring Boot 版本 -->
+        <org-springframework-boot.version>${parent.version}</org-springframework-boot.version>
+        <!-- 工程 版本 -->
+        <com-iscolt-codeDemo.version>1.0-SNAPSHOT</com-iscolt-codeDemo.version>
+        <!-- 通用依赖 版本 -->
+        <java.version>1.8</java.version>
+        <org.springframework.version>5.1.8.RELEASE</org.springframework.version>
+        <org.apache.httpcomponents.httpclient.version>4.5.8</org.apache.httpcomponents.httpclient.version>
+        <org.jsoup.jsoup.version>1.12.1</org.jsoup.jsoup.version>
+        <cn.hutool.hutool-all.version>4.5.12</cn.hutool.hutool-all.version>
+        <org.projectlombok.lombox.version>1.18.8</org.projectlombok.lombox.version>
+        <org.json.json.version>20160212</org.json.json.version>
+        <com.fasterxml.jackson.core.version>2.9.9</com.fasterxml.jackson.core.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- HttpClient -->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${org.apache.httpcomponents.httpclient.version}</version>
+            </dependency>
+            <!-- Jsoup -->
+            <dependency>
+                <groupId>org.jsoup</groupId>
+                <artifactId>jsoup</artifactId>
+                <version>${org.jsoup.jsoup.version}</version>
+            </dependency>
+            <!-- json -->
+            <dependency>
+                <groupId>org.json</groupId>
+                <artifactId>json</artifactId>
+                <version>${org.json.json.version}</version>
+            </dependency>
+            <!-- Spring messaging -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-messaging</artifactId>
+                <version>${org.springframework.version}</version>
+            </dependency>
+            <!-- Jackson -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${com.fasterxml.jackson.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${com.fasterxml.jackson.core.version}</version>
+            </dependency>
+
+            <!-- Hutool 工具包 -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${cn.hutool.hutool-all.version}</version>
+            </dependency>
+            <!-- lombox -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${org.projectlombok.lombox.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!-- 继承说明：这里继承SpringBoot提供的父工程 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.6.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <!-- 项目说明：这里作为聚合工程的父工程 -->
+    <groupId>com.iscolt</groupId>
+    <artifactId>codeDemo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <!-- 模块说明：这里声明多个子模块 -->
+    <modules>
+        <module>dependencies</module>
+        <module>weather-forecast</module>
+        <module>chat-room</module>
+        <module>mail</module>
+        <module>multipartAndControllerAdvice</module>
+        <module>cors</module>
+        <module>cors-test</module>
+        <module>interceptor</module>
+        <module>aop</module>
+        <module>dtai</module>
+        <module>seesion</module>
+    </modules>
+
+</project>

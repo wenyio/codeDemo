@@ -1,0 +1,79 @@
+# 版本
+work:
+  idler:
+    dtai:
+      version: @project.version@
+
+# 服务端口
+server:
+  port: 5211
+
+spring:
+  # 数据源配置
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/dtai?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: XURGp8pAaYztYPRLFwQ2X3wVYc86dO22Hy/hF3jPZe4GPVWrAKvkXSy9azk7s00rcvMb0Ho8NcuR+Rk2HT2Kmw==
+    #druid配置
+    druid:
+      initial-size: 5  #初始化连接数
+      max-active: 20 #最大连接数
+      min-idle: 5 #最小连接数
+      max-wait: 6000 #最大等待时间
+      connect-properties: config.decrypt=true;config.decrypt.key=${spring.datasource.druid.config.key}
+      #开启监控页面
+      stat-view-servlet:
+        enabled: true
+        login-username: admin
+        login-password: 5211
+      #开启Web监控
+      web-stat:
+        enabled: true
+      #开启AOP监控
+      aop-stat:
+        enabled: true
+      #开启WallFilter
+      wall:
+        enabled: true
+        throw-exception: true
+      config:
+        enabled: true
+        #加密秘钥
+        key: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAI7bQlQSFphi94awDaf57HC1Pna/42xxdFSuB9bjOoB7l0BKwxdw1etPFnYLlCswSHuOL3IQn7fTX5ZrDYZ2Z5MCAwEAAQ==
+
+  jpa:
+    hibernate:
+      # 更新或者创建数据表结构
+      ddl-auto: update
+    # 控制台显示SQL
+    show-sql: true
+
+  # redis 配置
+  redis:
+    database: 0
+    host: www.iscolt.com
+    port: 6379
+    password: 5211
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
+
+  # mongodb 配置
+#  mongodb:
+#    authentication-database: admin
+#    database: dtai
+#    host: www.iscolt.com
+#    port: 27017
+#    username: root
+#    password: 5211
+
+  # security 配置
+  security:
+    user:
+      name: admin
+      password: 5211
+      roles: admin
