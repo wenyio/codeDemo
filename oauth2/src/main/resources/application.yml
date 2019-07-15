@@ -1,0 +1,13 @@
+spring:
+  # redis 配置
+  redis:
+    database: 0
+    host: www.iscolt.com
+    port: 6379
+    password: 5211
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0

@@ -8,11 +8,12 @@ work:
 server:
   port: 5211
 
+
 spring:
   # 数据源配置
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://localhost:3306/dtai?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    url: jdbc:mysql://www.iscolt.com:3306/dtai?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
     username: root
     password: XURGp8pAaYztYPRLFwQ2X3wVYc86dO22Hy/hF3jPZe4GPVWrAKvkXSy9azk7s00rcvMb0Ho8NcuR+Rk2HT2Kmw==
     #druid配置
@@ -72,8 +73,17 @@ spring:
 #    password: 5211
 
   # security 配置
-  security:
-    user:
-      name: admin
-      password: 5211
-      roles: admin
+#  security:
+#    user:
+#      name: admin
+#      password: 5211
+#      roles: admin
+#      http:
+#        csrf():
+#          ignoringAntMatchers("/druid/*");:
+# mybatis 扫包
+mybatis:
+  work.idler.dtai.mapper-locations: classpath*:mapper/*.xml
+  # 开启驼峰命名规范
+  configuration:
+    map-underscore-to-camel-case: true

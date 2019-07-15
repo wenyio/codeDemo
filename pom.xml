@@ -29,6 +29,8 @@
         <module>aop</module>
         <module>dtai</module>
         <module>seesion</module>
+        <module>oauth2</module>
+        <module>shiro</module>
     </modules>
 
 </project>

@@ -1,4 +1,4 @@
-package work.idler.dtai.controller;
+package work.idler.dtai.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -8,15 +8,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import work.idler.dtai.model.entity.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * 测试控制器
  *
  * @Auther: MaWenyi
  * @Date: 2019/6/29
- * @Description: work.idler.dtai.controller
+ * @Description: work.idler.dtai.web.controller
  * @version: 1.0
  */
 @RestController
@@ -43,5 +40,11 @@ public class TestController {
         System.out.println(test1);
     }
 
-
+    @GetMapping("getAbc")
+    public Test getAbc() {
+        ValueOperations operations1 = redisTemplate.opsForValue();
+        Test test1 = (Test) operations1.get("abc");
+        System.out.println(test1);
+        return test1;
+    }
 }

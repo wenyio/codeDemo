@@ -1,0 +1,18 @@
+# Shiro 配置
+shiro:
+  # 开启 Shiro配置
+  enabled: true
+  # 开启 Shiro Web 配置
+  web:
+    enabled: true
+  # 登录 url
+  loginUrl: /login
+  # 成功 url
+  successUrl: /index
+  # 未授权 url
+  unauthorizedUrl: /unauthorized
+  sessionManager:
+    # 是否允许通过 URL 参数实现会话跟踪
+    sessionIdUrlRewritingEnabled: true
+    # 是否允许通过 Cookie 实现会话踪
+    sessionIdCookieEnabled: true
